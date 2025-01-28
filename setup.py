@@ -29,7 +29,7 @@ class PostInstallCommand(install):
 
 setup(
     name='Gitgator',
-    version='0.2',
+    version='0.3',
     description='Advanced GitHub Enumeration Toolkit',
     long_description='Comprehensive GitHub scanning tool with secret detection and custom dork capabilities',
     author='xMusashi13',
@@ -40,7 +40,6 @@ setup(
     install_requires=[
         'configparser>=5.3.0',
         'pathlib>=1.0.1',
-        'requests>=2.26.0',
         'shutilwhich>=1.1.0'
     ],
     cmdclass={
