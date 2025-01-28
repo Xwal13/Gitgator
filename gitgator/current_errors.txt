@@ -1,0 +1,9 @@
+[+] Running SecretFinder on: _ssgManifest.js
+Usage: python /home/kuro/bin/SecretFinder [OPTIONS] use -h for help
+Error: file could not be found (maybe you forgot to add http/https).
+
+[+] Running SecretFinder on: 9092_4ca49c705e1d7dc1.js
+Usage: python /home/kuro/bin/SecretFinder [OPTIONS] use -h for help
+Error: file could not be found (maybe you forgot to add http/https).
+[!] SecretFinder failed to analyze: 9092_4ca49c705e1d7dc1.js
+
