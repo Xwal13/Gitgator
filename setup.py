@@ -13,7 +13,7 @@ class PostInstallCommand(install):
             subprocess.check_call(['sudo', 'gem', 'install', 'lolcat'])
             
             # Install Delta Corps Priest font
-            font_url = 'https://github.com/xero/figlet-fonts/raw/master/delta_corps_priest_1.flf'
+            font_url = 'https://raw.githubusercontent.com/xero/figlet-fonts/master/delta_corps_priest_1.flf'
             font_dir = '/usr/share/figlet/'
             subprocess.check_call(['wget', font_url])
             subprocess.check_call(['sudo', 'mv', 'delta_corps_priest_1.flf', font_dir])
