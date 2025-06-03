@@ -1,4 +1,4 @@
-![GitGator Logo](assets/logo.png)
+
 # GitGator
 
 **GitGator** is a command-line tool for automating security enumeration and secrets scanning across GitHub organizations. It leverages open-source tools like Gitleaks, Trufflehog, and Dorky to quickly find secrets, sensitive files, and interesting patterns in repositories belonging to one or more target organizations.
@@ -25,9 +25,17 @@ git clone https://github.com/YOURUSERNAME/GitGator.git
 cd GitGator
 ```
 
-### 2. Install Dependencies and Tools
+### 2. Install Python dependencies
 
-A helper script is provided for Ubuntu/Debian systems:
+Make sure you have Python 3 and pip installed. Then run:
+
+```bash
+pip3 install -r requirements.txt
+```
+
+### 3. Install Tools
+
+A helper script is provided for Ubuntu/Debian systems to install all required tools:
 
 ```bash
 chmod +x install_tools.sh
@@ -36,7 +44,7 @@ chmod +x install_tools.sh
 
 This will:
 - Install Python 3, pip, Go (if not already installed)
-- Install Python dependencies from `requirements.txt` (if present)
+- Install Python dependencies from `requirements.txt`
 - Install [Gitleaks](https://github.com/gitleaks/gitleaks)
 - Install [Trufflehog](https://github.com/trufflesecurity/trufflehog) via pip
 - Clone and build [Dorky](https://github.com/codingo/dorky) from source (requires Go)
@@ -82,19 +90,19 @@ GITHUB = your_github_api_token
 ### Basic: Scan a single organization
 
 ```bash
-python3 main.py -Org <organization_name>
+gitgator -Org <organization_name>
 ```
 
 ### Multiple organizations
 
 ```bash
-python3 main.py -mOrg org1 org2 org3
+gitgator -mOrg org1 org2 org3
 ```
 
 ### Custom Dorks
 
-- Place `.txt` files with custom dork keywords inside a `dorks/` folder in the project root.
-- These will be included in the Dorky scan wordlist.
+ Place `.txt` files with custom dork keywords inside a `dorks/` folder in the project root.
+ These will be included in the Dorky scan wordlist.
 
 ---
 
@@ -121,20 +129,6 @@ python3 main.py -Org mycompany
 
 You will see real-time progress and a summary of output locations.
 
----
-
-## Troubleshooting
-
-- **No `dorky` command found:**  
-  Ensure you built the Go-based Dorky CLI and that `/usr/local/bin` is in your `$PATH`.
-- **Missing dependencies:**  
-  Rerun `./install_tools.sh` or manually install any missing tools.
-- **Permission errors:**  
-  Some installations may require `sudo` (especially when moving binaries).
-- **GitHub API rate limits:**  
-  Use a personal access token with sufficient permissions.
-
----
 
 ## License
 
