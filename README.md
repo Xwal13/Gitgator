@@ -90,19 +90,19 @@ GITHUB = your_github_api_token
 ### Basic: Scan a single organization
 
 ```bash
-gitgator -Org <organization_name>
+python3 main.py -Org <organization_name>
 ```
 
 ### Multiple organizations
 
 ```bash
-gitgator -mOrg org1 org2 org3
+python3 main.py -mOrg org1 org2 org3
 ```
 
 ### Custom Dorks
 
- Place `.txt` files with custom dork keywords inside a `dorks/` folder in the project root.
- These will be included in the Dorky scan wordlist.
+- Place `.txt` files with custom dork keywords inside a `dorks/` folder in the project root.
+- These will be included in the Dorky scan wordlist.
 
 ---
 
@@ -129,6 +129,20 @@ python3 main.py -Org mycompany
 
 You will see real-time progress and a summary of output locations.
 
+---
+
+## Troubleshooting
+
+- **No `dorky` command found:**  
+  Ensure you built the Go-based Dorky CLI and that `/usr/local/bin` is in your `$PATH`.
+- **Missing dependencies:**  
+  Rerun `./install_tools.sh` or manually install any missing tools.
+- **Permission errors:**  
+  Some installations may require `sudo` (especially when moving binaries).
+- **GitHub API rate limits:**  
+  Use a personal access token with sufficient permissions.
+
+---
 
 ## License
 
