@@ -121,32 +121,13 @@ python3 main.py -mOrg org1 org2 org3
 
 ---
 
-## Example
+## Usage
 
 ```bash
 python3 main.py -Org mycompany
 ```
 
 You will see real-time progress and a summary of output locations.
-
----
-
-## Troubleshooting
-
-- **No `dorky` command found:**  
-  Ensure you built the Go-based Dorky CLI and that `/usr/local/bin` is in your `$PATH`.
-- **Missing dependencies:**  
-  Rerun `./install_tools.sh` or manually install any missing tools.
-- **Permission errors:**  
-  Some installations may require `sudo` (especially when moving binaries).
-- **GitHub API rate limits:**  
-  Use a personal access token with sufficient permissions.
-
----
-
-## License
-
-MIT License (see LICENSE file).
 
 ---
 
